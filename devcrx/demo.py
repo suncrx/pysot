@@ -34,8 +34,8 @@ SNAPSHOT = '../experiments/siamrpn_alex_dwxcorr/model.pth'
 CFG = '../experiments/siamrpn_mobilev2_l234_dwxcorr/config.yaml'    
 SNAPSHOT = '../experiments/siamrpn_mobilev2_l234_dwxcorr/model.pth'
 
-CFG = '../experiments/siammask_r50_l3/config.yaml'    
-SNAPSHOT = '../experiments/siammask_r50_l3/model.pth'
+#CFG = '../experiments/siammask_r50_l3/config.yaml'    
+#SNAPSHOT = '../experiments/siammask_r50_l3/model.pth'
 
 
 #---------------------------------------------
@@ -51,8 +51,8 @@ GT_FILE = None
 #VIDEO = 'D:\GeoData\Videos\Drone\drone_traffic04.mp4'
 #GT_FILE = None
 
-VIDEO = 'D:/GeoData/Videos/Drone/dji0265/DJI_0265.mp4'
-GT_FILE = None
+#VIDEO = 'D:/GeoData/Videos/Drone/dji0265/DJI_0265.mp4'
+#GT_FILE = None
 
 #VIDEO = 'D:/GeoData/Videos/TestVideos/street-5025.mp4' #'People-6387.mp4'
 #GT_FILE = None
@@ -130,11 +130,13 @@ def main():
     for frame in get_frames(args.video_name):
         frame_count += 1
         if frame_count==1:
+            # select ROI 
             if args.gt_file is None or not os.path.exists(args.gt_file):
                 try:
                     init_rect = cv2.selectROI(video_name, frame, False, False)
                 except:
                     exit()
+            # Read ROI from groundtruth file
             else:
                 anno = np.loadtxt(os.path.join(args.gt_file), delimiter=',')
                 init_rect = anno[0]

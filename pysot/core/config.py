@@ -138,8 +138,8 @@ __C.DATASET.GRAY = 0.0
 __C.DATASET.NAMES = ('VID', 'COCO', 'DET', 'YOUTUBEBB')
 
 __C.DATASET.VID = CN()
-__C.DATASET.VID.ROOT = 'training_dataset/vid/crop511'
-__C.DATASET.VID.ANNO = 'training_dataset/vid/train.json'
+__C.DATASET.VID.ROOT = 'training_dataset/imagenet/crop511'
+__C.DATASET.VID.ANNO = 'training_dataset/imagenet/train.json'
 __C.DATASET.VID.FRAME_RANGE = 100
 __C.DATASET.VID.NUM_USE = 100000  # repeat until reach NUM_USE
 

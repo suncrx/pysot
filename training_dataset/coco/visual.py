@@ -7,7 +7,9 @@ color_bar = np.random.randint(0, 255, (90, 3))
 visual = True
 
 dataDir = '.'
-dataType = 'val2017'
+dataDir = 'D:/GeoData/Benchmark/COCO_Data/coco'
+
+dataType = 'val2014'
 annFile = '{}/annotations/instances_{}.json'.format(dataDir,dataType)
 coco = COCO(annFile)
 
@@ -24,6 +26,8 @@ for img_id in coco.imgs:
             pt2 = (int(rect[0]+rect[2]), int(rect[1]+rect[3]))
             cv2.rectangle(im, pt1, pt2, color_bar[c-1], 3)
     cv2.imshow('img', im)
-    cv2.waitKey(200)
+    k = cv2.waitKey(200)
+    if k==27:
+        break
 print('done')
 
