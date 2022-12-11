@@ -135,7 +135,7 @@ __C.DATASET.NEG = 0.2
 # improve tracking performance for otb100
 __C.DATASET.GRAY = 0.0
 
-__C.DATASET.NAMES = ['COCO']
+__C.DATASET.NAMES = ('VID', 'COCO', 'DET', 'YOUTUBEBB')
 
 __C.DATASET.VID = CN()
 __C.DATASET.VID.ROOT = 'training_dataset/imagenet/crop511'
@@ -150,8 +150,8 @@ __C.DATASET.YOUTUBEBB.FRAME_RANGE = 3
 __C.DATASET.YOUTUBEBB.NUM_USE = -1  # use all not repeat
 
 __C.DATASET.COCO = CN()
-__C.DATASET.COCO.ROOT = 'training_dataset/coco/crop511'    # 'D:/GeoData/Benchmark/COCO/crop511'
-__C.DATASET.COCO.ANNO = 'training_dataset/coco/train.json' # 'D:/GeoData/Benchmark/COCO/crop511/train2014.json'
+__C.DATASET.COCO.ROOT = 'training_dataset/coco/crop511'
+__C.DATASET.COCO.ANNO = 'training_dataset/coco/train2017.json'
 __C.DATASET.COCO.FRAME_RANGE = 1
 __C.DATASET.COCO.NUM_USE = -1
 

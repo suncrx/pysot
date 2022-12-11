@@ -19,8 +19,10 @@ logger = logging.getLogger('global')
 
 
 def average_reduce(v):
-    if get_world_size() == 1:
-        return v
+    #if get_world_size() == 1:
+    #    return v
+    return v
+
     tensor = torch.cuda.FloatTensor(1)
     tensor[0] = v
     dist.all_reduce(tensor)
@@ -129,6 +131,10 @@ def reduce_gradients(model, _type='sum'):
     types = ['sum', 'avg']
     assert _type in types, 'gradients method must be in "{}"'.format(types)
     log_once("gradients method is {}".format(_type))
+
+    return None
+
+    '''   
     if get_world_size() > 1:
         for param in model.parameters():
             if param.requires_grad:
@@ -137,3 +143,4 @@ def reduce_gradients(model, _type='sum'):
                     param.grad.data /= get_world_size()
     else:
         return None
+    '''

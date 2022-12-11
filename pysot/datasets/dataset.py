@@ -277,3 +277,13 @@ class TrkDataset(Dataset):
                 'label_loc_weight': delta_weight,
                 'bbox': np.array(bbox)
                 }
+
+
+if __name__ == '__main__':
+    cfg.DATASET.COCO.ROOT = 'D:/GeoData/Benchmark/COCO/crop511'
+    cfg.DATASET.COCO.ANNO = 'D:/GeoData/Benchmark/COCO/crop511/train2014_mini.json'
+    cfg.DATASET.VIDEOS_PER_EPOCH = 600
+    d = TrkDataset()
+    print(d[0]['template'].shape)
+    print(d[0]['search'].shape)
+    print(d[0]['bbox'])

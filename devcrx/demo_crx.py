@@ -26,13 +26,13 @@ torch.set_num_threads(1)
 
 #----------------------------------------------
 CFG = '../experiments/siamrpn_r50_l234_dwxcorr/config.yaml'    
-SNAPSHOT = '../experiments/siamrpn_r50_l234_dwxcorr/model.pth'
+SNAPSHOT = '../experiments/siamrpn_r50_l234_dwxcorr/model_e19.pth' #'model.pth'
 
-CFG = '../experiments/siamrpn_alex_dwxcorr/config.yaml'    
-SNAPSHOT = '../experiments/siamrpn_alex_dwxcorr/model.pth'
+#CFG = '../experiments/siamrpn_alex_dwxcorr/config.yaml'    
+#SNAPSHOT = '../experiments/siamrpn_alex_dwxcorr/model.pth'
 
-CFG = '../experiments/siamrpn_mobilev2_l234_dwxcorr/config.yaml'    
-SNAPSHOT = '../experiments/siamrpn_mobilev2_l234_dwxcorr/model.pth'
+#CFG = '../experiments/siamrpn_mobilev2_l234_dwxcorr/config.yaml'    
+#SNAPSHOT = '../experiments/siamrpn_mobilev2_l234_dwxcorr/model.pth'
 
 #CFG = '../experiments/siammask_r50_l3/config.yaml'    
 #SNAPSHOT = '../experiments/siammask_r50_l3/model.pth'
@@ -42,8 +42,8 @@ SNAPSHOT = '../experiments/siamrpn_mobilev2_l234_dwxcorr/model.pth'
 VIDEO = 'D:/GeoData/Benchmark/VIDEOS/VTB/Car24/img'
 GT_FILE = 'D:/GeoData/Benchmark/VIDEOS/VTB/Car24/groundtruth.txt'
 
-VIDEO = 'D:/GeoData/Benchmark/VIDEOS/VOT2018/road/img'
-GT_FILE = None
+#VIDEO = 'D:/GeoData/Benchmark/VIDEOS/VOT2018/road/img'
+#GT_FILE = None
 
 #VIDEO = 'D:/GeoData/Videos/Drone/drone1/frames2'
 #GT_FILE = 'D:/GeoData/Videos/Drone/drone1/groundth.txt'

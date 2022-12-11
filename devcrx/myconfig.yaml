@@ -1,0 +1,8 @@
+# improve tracking performance for otb100
+
+DATASET:
+   NAMES: ('COCO')
+   COCO:
+      ROOT: 'D:/GeoData/Benchmark/COCO/crop511'
+      ANNO: 'D:/GeoData/Benchmark/COCO/crop511/train2014.json'
+   VIDEOS_PER_EPOCH: 6000
